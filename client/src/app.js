@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./styles/index.css";
+import "./styles/style.css";
+import Footer from "./components/Footer";
 
 ReactDOM.render(
-    <h1>Hello World</h1>,
-    document.querySelector('#root')
+  <div>
+    <h1>Hello World!</h1>
+    <Footer />
+  </div>,
+  document.querySelector("#root")
 );
