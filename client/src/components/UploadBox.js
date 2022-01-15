@@ -34,6 +34,9 @@ export default function UploadBox() {
         </div>
 
         <form className="form">
+          <label className="form__label" htmlFor="file">
+            Choose a file
+          </label>
           <input
             onChange={submitHandler}
             type="file"
