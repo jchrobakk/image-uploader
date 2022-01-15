@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // importuję odpowiedni plugin
 module.exports = {
   entry: "./src/app.js",
+  target: "web",
   // definiuje plik wejściowy
   output: {
     path: path.resolve(__dirname, "build"),

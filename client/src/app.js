@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import UploadBox from "./components/UploadBox";
 
 ReactDOM.render(
-  <div>
+  <div className="wrapper">
     <UploadBox />
     <Footer />
   </div>,
