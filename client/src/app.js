@@ -1,13 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./styles/style.css";
-import Footer from "./components/Footer";
-import UploadBox from "./components/UploadBox";
+import './styles/style.css';
+import App from './components/App';
 
-ReactDOM.render(
-  <div className="wrapper">
-    <UploadBox />
-    <Footer />
-  </div>,
-  document.querySelector("#root")
-);
+ReactDOM.render(<App />, document.querySelector('#root'));
