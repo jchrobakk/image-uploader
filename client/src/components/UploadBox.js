@@ -1,17 +1,19 @@
 import React from 'react';
 import image from '../img/image.svg';
 
-export default function UploadBox() {
+export default function UploadBox(props) {
+	const { setLoading } = props;
+
 	const submitHandler = (e) => {
 		e.preventDefault();
 		console.log('submit');
 
 		const startLoading = () => {
-			console.log('start loading');
+			setLoading(true);
 		};
 
 		const stopLoading = () => {
-			console.log('stop loading');
+			setLoading(false);
 		};
 
 		//fetch the image and send it to the server
