@@ -20,6 +20,27 @@ export default function UploadBox() {
       .catch((err) => console.log(err));
   };
 
+  const dropHandler = (e) => {
+    e.preventDefault();
+
+    const img = e.dataTransfer.files[0];
+    const type = img.type;
+    console.log(type);
+
+    if (type.includes("image")) {
+      const formData = new FormData();
+      formData.append("file", img);
+
+      fetch("http://localhost:5000/", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err));
+    }
+  };
+
   return (
     <main className="main">
       <section className="uploadbox">
@@ -28,7 +49,11 @@ export default function UploadBox() {
         {/* <form className="form">
           <input onChange={submitHandler} type="file" className="form__input" />
         </form> */}
-        <div className="drop-zone">
+        <div
+          onDrop={dropHandler}
+          onDragOver={(e) => e.preventDefault()}
+          className="drop-zone"
+        >
           <img src={image} alt="upload" />
           <p className="drop-zone__info">Drag and Drop your image here</p>
         </div>
