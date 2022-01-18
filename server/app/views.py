@@ -35,5 +35,5 @@ def download(image):
     return {
         "message": "",
         "url": request.url,
-        "folder": "/images" + image
+        "folder": "/images/" + image
     }
