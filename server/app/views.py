@@ -34,5 +34,6 @@ def uploading():
 def download(image):
     return {
         "message": "",
-        "url": request.url
+        "url": request.url,
+        "folder": "/images" + image
     }
