@@ -20,7 +20,10 @@ def upload():
             file_extension = "." + file.filename.rsplit('.', 1)[1].lower()
             filename = secure_filename('image' + "".join([choice(ascii_letters) for _ in range(5)]) + file_extension)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('download', image=filename))
+            return {
+                "message": "File was successfully uploaded to the server.",
+                "url": url_for('download', image=filename)
+            }
     return {"message": ""}
 
 @app.route('/uploading')
