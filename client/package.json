@@ -1,6 +1,7 @@
 {
   "name": "webpack-helloworld",
   "version": "1.0.0",
+  "proxy": "http://127.0.0.1:5000/",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +18,7 @@
     "@babel/preset-react": "^7.7.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.37.1",

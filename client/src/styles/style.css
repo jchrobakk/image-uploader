@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:regular,italic,700,700italic);
 
 * {
     margin: 0;
@@ -8,5 +10,86 @@
 
 body {
     background: #FAFAFB;
+    font-family: sans-serif;
+    
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    flex-grow: 9;
+}
+
+footer {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
     font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.uploadbox {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    padding: 36px;
+}
+
+.uploadbox__title {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 24px;
+    color: #4F4F4F;
+}
+
+
+.uploadbox__info {
+    margin-top: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #828282;
+}
+
+.drop-zone {
+    padding: 20px 40px;
+    background: #F6F8FB;
+    border: 1px dashed #97BEF4;
+    border-radius: 12px;
+    margin: 18px 0;
+}
+
+.drop-zone__info {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 36px;
+    font-size: 18px;
+    color: #BDBDBD;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.form__label {
+    cursor: pointer;
+    display: inline-block;
+    background: #2F80ED;
+    border-radius: 8px;
+    text-align: center;
+    padding: 12px 6px;
+    color: #FFFFFF;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+
 }
